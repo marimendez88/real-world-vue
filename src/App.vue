@@ -14,7 +14,7 @@ import HelloWorld from "@/components/HelloWorld.vue";
     />
 
     <div class="wrapper">
-      <HelloWorld msg="You did it!" />
+      <HelloWorld msg="First Vite + Vue 3 App" />
 
       <nav>
         <RouterLink :to="{name : 'events'}">Events</RouterLink>
