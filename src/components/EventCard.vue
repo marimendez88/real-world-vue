@@ -8,7 +8,7 @@ export default {
 </script>
 
 <template>
-<router-link to="/event/123">
+<router-link class="event-link" :to="{ name: 'eventDetails', params: { id: eventData.id } }">
   <div class="event-card">
     <span>
     @{{eventData.time}} on {{eventData.date}}
@@ -23,13 +23,17 @@ export default {
   padding: 20px;
   width: 250px;
   cursor: pointer;
-  border: 1px solid #39495c;
+  border: 1px solid #e8eef5;
   margin-bottom: 18px;
 }
 
 .event-card:hover {
   transform: scale(1.01);
-  box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 3px 12px 0 rgba(143, 143, 143, 0.397);
+}
+.event-link{
+  color: #a4bfda;
+  text-decoration: none;
 }
 </style>
 

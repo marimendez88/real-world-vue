@@ -17,8 +17,8 @@ import HelloWorld from "@/components/HelloWorld.vue";
       <HelloWorld msg="You did it!" />
 
       <nav>
-        <RouterLink to="/events">Events</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
+        <RouterLink :to="{name : 'events'}">Events</RouterLink>
+        <RouterLink :to="{name : 'about'}">About</RouterLink>
       </nav>
     </div>
   </header>
@@ -58,11 +58,6 @@ a,
   transition: 0.4s;
 }
 
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
-}
 
 nav {
   width: 100%;
