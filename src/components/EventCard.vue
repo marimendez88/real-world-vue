@@ -8,12 +8,14 @@ export default {
 </script>
 
 <template>
+<router-link to="/event/123">
   <div class="event-card">
     <span>
     @{{eventData.time}} on {{eventData.date}}
     </span>
     <h4>{{eventData.title}}</h4>
   </div>
+  </router-link>
 </template>
 
 <style scoped>

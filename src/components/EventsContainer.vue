@@ -1,10 +1,5 @@
 <script setup>
 import EventCard from "./EventCard.vue";
-import DocumentationIcon from "./icons/IconDocumentation.vue";
-import ToolingIcon from "./icons/IconTooling.vue";
-import EcosystemIcon from "./icons/IconEcosystem.vue";
-import CommunityIcon from "./icons/IconCommunity.vue";
-import SupportIcon from "./icons/IconSupport.vue";
 import EventService from "@/services/EventService.js";
 </script>
 <script>
@@ -31,7 +26,7 @@ export default {
 <hr>
 <br>
 <section class="events">
-  <EventCard v-for="event in events" :key="event.id" :eventData="event" />
+  <EventCard v-for="event in events" :key="event.id" :eventData="event"  />
   </section>
 </template>
 
