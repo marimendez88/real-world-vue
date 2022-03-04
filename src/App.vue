@@ -17,8 +17,8 @@ import HelloWorld from "@/components/HelloWorld.vue";
       <HelloWorld msg="First Vite + Vue 3 App" />
 
       <nav>
-        <RouterLink :to="{name : 'events'}">Events</RouterLink>
-        <RouterLink :to="{name : 'about'}">About</RouterLink>
+        <RouterLink :to="{name : 'Events'}">Events</RouterLink>
+        <RouterLink :to="{name : 'About'}">About</RouterLink>
       </nav>
     </div>
   </header>

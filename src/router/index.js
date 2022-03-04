@@ -11,7 +11,7 @@ const router = createRouter({
         import.meta.env.BASE_URL),
     routes: [{
             path: "/",
-            name: "events",
+            name: "Events",
             component: EventsView,
             props: route => ({ page: parseInt(route.query.page) || 1 })
         },
@@ -26,12 +26,12 @@ const router = createRouter({
                     component: EventDetails
                 },
                 {
-                    path: '/register',
+                    path: 'register',
                     name: 'EventRegister',
                     component: EventRegister
                 },
                 {
-                    path: '/edit',
+                    path: 'edit',
                     name: 'EventEdit',
                     component: EventEdit
                 },
@@ -40,9 +40,13 @@ const router = createRouter({
 
         },
         {
-            path: "/about",
-            name: "about",
+            path: "/about-us",
+            name: "About",
             component: AboutViewVue
+        },
+        {
+            path: "/about",
+            redirect: { name: 'About' },
         },
     ],
 });

@@ -43,8 +43,8 @@ export default {
 <section class="events">
   <EventCard v-for="event in events" :key="event.id" :eventData="event"  />
   <section class="pagination">
-  <router-link id="page-prev" :to="{ name: 'events', query: { page: page - 1 }}" rel="prev" v-if="page != 1"> Previous</router-link>
-    <router-link id="page-next" :to="{ name: 'events', query: { page: page + 1 }}" rel="next" v-if="hasNextPage" >Next </router-link>
+  <router-link id="page-prev" :to="{ name: 'Events', query: { page: page - 1 }}" rel="prev" v-if="page != 1"> Previous</router-link>
+    <router-link id="page-next" :to="{ name: 'Events', query: { page: page + 1 }}" rel="next" v-if="hasNextPage" >Next </router-link>
 </section>
   </section>
   </main>

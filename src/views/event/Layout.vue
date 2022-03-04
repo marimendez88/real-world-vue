@@ -27,15 +27,15 @@ export default {
   <div v-if="eventData" >
     <h1>{{eventData.title}}</h1>
     <div id="nav">
-      <router-link :to="{ name: 'EventDetails', params: { id } }"
+      <router-link :to="{ name: 'EventDetails' }"
         >Details</router-link
       >
       |
-      <router-link :to="{ name: 'EventRegister', params: { id } }"
+      <router-link :to="{ name: 'EventRegister' }"
         >Register</router-link
       >
       |
-      <router-link :to="{ name: 'EventEdit', params: { id } }"
+      <router-link :to="{ name: 'EventEdit' }"
         >Edit</router-link
       >
     </div>
