@@ -2,7 +2,11 @@
 import { RouterLink, RouterView } from "vue-router";
 import HelloWorld from "@/components/HelloWorld.vue";
 </script>
-
+<script>
+export default {
+  inject: ['GStore'],
+}
+</script>
 <template>
   <header>
     <img
@@ -14,15 +18,16 @@ import HelloWorld from "@/components/HelloWorld.vue";
     />
 
     <div class="wrapper">
-      <HelloWorld msg="First Vite + Vue 3 App" />
-
+      <HelloWorld msg="MJ's First Vite + Vue 3 App" />
       <nav>
         <RouterLink :to="{name : 'Events'}">Events</RouterLink>
         <RouterLink :to="{name : 'About'}">About</RouterLink>
       </nav>
     </div>
   </header>
-
+    <div class="flashMessage" v-if="GStore.flashMessage">
+    {{ GStore.flashMessage }}
+  </div>
   <RouterView />
 </template>
 
@@ -83,6 +88,20 @@ nav a {
 nav a:first-of-type {
   border: 0;
 }
+@keyframes yellowfade {
+  from {
+    background: yellow;
+  }
+  to {
+    background: transparent;
+  }
+}
+
+#flashMessage {
+  animation-name: yellowfade;
+  animation-duration: 3s;
+}
+
 
 @media (min-width: 1024px) {
   body {
