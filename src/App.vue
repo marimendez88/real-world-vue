@@ -8,6 +8,9 @@ export default {
 }
 </script>
 <template>
+ <div id="flashMessage" v-if="GStore.flashMessage">
+    {{ GStore.flashMessage }}
+  </div>
   <header>
     <img
       alt="Vue logo"
@@ -25,9 +28,6 @@ export default {
       </nav>
     </div>
   </header>
-    <div class="flashMessage" v-if="GStore.flashMessage">
-    {{ GStore.flashMessage }}
-  </div>
   <RouterView />
 </template>
 
@@ -88,9 +88,9 @@ nav a {
 nav a:first-of-type {
   border: 0;
 }
-@keyframes yellowfade {
+@keyframes greenFade {
   from {
-    background: yellow;
+    background: hsla(160, 100%, 37%, 1);
   }
   to {
     background: transparent;
@@ -98,8 +98,14 @@ nav a:first-of-type {
 }
 
 #flashMessage {
-  animation-name: yellowfade;
+  animation-name: greenFade;
   animation-duration: 3s;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
 }
 
 
